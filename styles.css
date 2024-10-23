@@ -1,0 +1,313 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blueTheme: #0F1271;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+header {
+  width: 100%;
+  background: var(--blueTheme);
+  padding: 10px 20px;
+  color: white
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffcc00;
+}
+
+/* Burger Menu */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 4px;
+}
+
+/* Home Section */
+#home {
+  position: relative;
+  height: 100vh;
+  background-image: url('img/bgc.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.jumbotron {
+  color: #fff;
+  z-index: 1;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  font-size: 3rem;
+  margin: 20px;
+}
+
+.apply-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: var(--blueTheme); /* Blue color matching theme #007bff */
+    border: none;
+    border-radius: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.apply-btn:hover {
+    background-color: #007bff; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    font-weight: bold;
+}
+
+/* About Section */
+#about {
+  text-align: center;
+  background-color: #e0ecf8;
+}
+
+#about h2 {
+  margin-bottom: 2rem;
+}
+.about-section {
+  padding: 60px 20px;
+  background: #f4f4f4;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.about-box {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-box h3 {
+  margin-bottom: 15px;
+}
+
+.about-box p { text-align: justify }
+
+/* Scholarship Section */
+#scholarship h2 { margin-bottom: 1.5rem }
+
+.scholarship-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#scholarship p {
+  width: 90%;
+  margin: auto;
+}
+
+.scholarship-section img {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 30px;
+}
+
+/* Eligibility Section */
+#eligibility .container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+}
+
+.eligibility-section {
+  
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+  padding: 60px 20px;
+  background: #f4f4f4;
+}
+
+.eligibility-text {
+  width: 60%; /* Left section (text) takes up 60% */
+  line-height: 1.6;
+  padding-right: 20px; /* Add some space between text and image */
+}
+
+.eligibility-section ul {
+  /* list-style: none; */
+  padding-left: 20px;
+}
+
+.eligibility-section li {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.eligibility-image {
+  width: 40%; /* Right section (image) takes up 40% */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eligibility-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow for more appeal */
+}
+
+#eligibility .apply-btn {
+  display: block;
+  width: 280px;
+  margin: 1.5rem auto 0 auto;
+  text-align: center;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background: var(--blueTheme);
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .burger {
+      display: flex;
+  }
+
+  .nav-links {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      height: 100vh;
+      width: 60%;
+      background: #0044cc;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+  }
+
+  .nav-links li {
+      margin: 20px 0;
+  }
+
+  .mobile-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+  }
+
+  .show-menu .nav-links {
+      display: flex;
+  }
+
+  .show-overlay .mobile-overlay {
+      display: block;
+  }
+
+  .about-container {
+    flex-direction: column; /* Stack the cards vertically */
+  }
+
+  .about-box {
+    margin: 10px 0; /* Optional: Add some margin between the stacked boxes */
+  }
+
+  #eligibility .container {
+    flex-direction: column;
+  }
+
+  .eligibility-text, .eligibility-image {
+      width: 100%;
+  }
+
+  .eligibility-text {
+      padding-right: 0;
+  }
+
+  .eligibility-image img {
+      width: 80%; /* Adjust image size on mobile */
+      margin-top: 20px;
+  }
+}
